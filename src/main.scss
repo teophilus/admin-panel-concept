@@ -1,0 +1,141 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'styles/abstracts/variables',
+  'styles/abstracts/functions',
+  'styles/abstracts/mixins';
+
+// 2. Vendors
+@import
+  'styles/vendor/normalize';
+
+// 3. Base stuff
+@import
+  'styles/base/base',
+  'styles/base/fonts',
+  'styles/base/typography',
+  'styles/base/helpers';
+
+// 4. Layout-related sections
+@import
+  'styles/layout/header',
+  'styles/layout/footer';
+
+// 5. Components
+@import
+  'styles/components/button';
+
+// 6. Page-specific styles
+@import
+  'styles/pages/home';
+
+// 7. Themes
+@import
+  'styles/themes/default';
+
+
+.App {
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+  margin: 15px;
+}
+
+.admin-panel {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.required {
+  &:after {
+    content: " *";
+    color: red;
+  }
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+
+button {
+  border: 1px solid #108ee9;
+  background: #108ee9;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 25px;
+  display: flex;
+  align-self: flex-end;
+}
+
+section {
+  padding: 15px 0;
+  display: flex;
+    
+  .subsection {
+    flex-direction: column;
+    flex: 2;
+    
+    &:first-child {
+      flex: 1
+    }
+  }
+    
+  .input-wrapper {
+    padding-bottom: 15px;  
+  }
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
