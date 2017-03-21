@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the admin page.
+// -----------------------------------------------------------------------------
+
+body {
+  background-color: #fafafa;
+}
+
+.admin-panel {
+  display: flex;
+  flex-direction: row;
+
+  .main {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+section {
+  padding: 15px 0;
+  display: flex;
+    
+  .subsection {
+    flex-direction: column;
+    flex: 2;
+    
+    &:first-child {
+      flex: 1
+    }
+  }
+    
+  .input-wrapper {
+    padding-bottom: 15px;  
+  }
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

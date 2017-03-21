@@ -1,0 +1,50 @@
+.sidebar {
+  $bg-color: #364150;
+  $hover-color: darken($bg-color, 2%);
+  $selected-color: darken($bg-color, 5%);
+  $selected-hover-color: $hover-color;
+  width: 175px;
+  background-color: $bg-color;
+
+
+  li {
+    position: relative;
+    // height: 45px;
+  }
+
+  a {
+    display: block;
+    padding: 20px;
+    color: #d7d9dc;
+
+    &:hover {
+      background-color: $hover-color;
+      color: white;
+    }
+  }
+
+  input {
+    &[type='radio'] {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &:checked + a {
+      background-color: $selected-color;
+      color: white;
+    }
+
+    &:hover + a {
+      background-color: $hover-color;
+      color: white;
+    }
+  }
+}

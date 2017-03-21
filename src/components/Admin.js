@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import Sidebar from '../components/Sidebar';
+
+class Label extends Component {
+
+  render() {
+    return (<label className={this.props.setting.required ? 'required' : null}>{ this.props.setting.label }</label>)
+  }
+}
 
 class Input extends Component {
 
@@ -54,6 +62,43 @@ class Number extends Component {
   }
 }
 
+class Section extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      settingTypes: {
+        'input': Input,
+        'number': Number,
+        'dropdown': Dropdown,
+        'textarea': Textarea
+      }
+    }
+  }
+
+  render() {
+    const settings = this.props.section.settings
+      .map((setting) => {
+        const settingComponent = this.state.settingTypes[setting.type];
+        return React.createElement(settingComponent, {
+          setting: setting,
+          key: Math.random()
+        });
+      });
+    return (
+      <section>
+        <div className="subsection">
+          <h2>{ this.props.section.name }</h2>
+          <p>{ this.props.section.description }</p>
+        </div>
+        <div className="subsection card">
+          { settings }
+        </div>
+      </section>
+    )
+  }
+}
+
 class Admin extends Component {
 
   constructor() {
@@ -103,57 +148,14 @@ class Admin extends Component {
 
     return (
       <div className="admin-panel">
-        { components }
+        <Sidebar />
+        <div className="main">
+          { components }
+        </div>
         <button>Save</button>
       </div>
     )
   }
 }
-
-
-class Section extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      settingTypes: {
-        'input': Input,
-        'number': Number,
-        'dropdown': Dropdown,
-        'textarea': Textarea
-      }
-    }
-  }
-
-  render() {
-    const settings = this.props.section.settings
-      .map((setting) => {
-        const settingComponent = this.state.settingTypes[setting.type];
-        return React.createElement(settingComponent, {
-          setting: setting,
-          key: Math.random()
-        });
-      });
-    return (
-      <section>
-        <div className="subsection">
-          <h2>{ this.props.section.name }</h2>
-          <p>{ this.props.section.description }</p>
-        </div>
-        <div className="subsection card">
-          { settings }
-        </div>
-      </section>
-    )
-  }
-}
-
-class Label extends Component {
-
-  render() {
-    return <label className={this.props.setting.required ? 'required' : null}>{ this.props.setting.label }</label>
-  }
-}
-
 
 export default Admin;

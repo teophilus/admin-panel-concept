@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+button {
+  border: 1px solid #108ee9;
+  background: #108ee9;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 25px;
+  display: flex;
+  align-self: flex-end;
+}
