@@ -151,8 +151,8 @@ class Admin extends Component {
         <Sidebar />
         <div className="main">
           { components }
+          <button>Save</button>
         </div>
-        <button>Save</button>
       </div>
     )
   }

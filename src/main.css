@@ -490,6 +490,17 @@ body {
   position: absolute;
   width: 1px; }
 
+header {
+  background: #108ee9;
+  color: white;
+  padding: 5px 25px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; }
+
 button {
   border: 1px solid #108ee9;
   background: #108ee9;
@@ -503,8 +514,13 @@ button {
   width: 175px;
   background-color: #364150; }
 
+.sidebar ul {
+  padding: 0;
+  margin: 0; }
+
 .sidebar li {
-  position: relative; }
+  position: relative;
+  list-style: none; }
 
 .sidebar a {
   display: block;
@@ -540,11 +556,16 @@ body {
 
 .admin-panel {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 100vh;
+  padding-top: 50px; }
 
 .admin-panel .main {
   max-width: 80%;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  display: flex; }
 
 section {
   padding: 15px 0;

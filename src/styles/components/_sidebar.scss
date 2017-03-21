@@ -6,9 +6,14 @@
   width: 175px;
   background-color: $bg-color;
 
+  ul {
+    padding: 0;
+    margin: 0;
+  }
 
   li {
     position: relative;
+    list-style: none;
     // height: 45px;
   }
 

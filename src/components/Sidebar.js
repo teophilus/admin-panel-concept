@@ -6,7 +6,7 @@ class SidebarItem extends Component {
     return (
       <li>
         <input type="radio" name="sidebar" value="one"/>
-        <a href="#">One</a>
+        <a href="#">Menu Item</a>
       </li>
     )
   }
@@ -18,9 +18,11 @@ class Sidebar extends Component {
       <div className="sidebar">
           <ul>
             <SidebarItem />
+            <SidebarItem />
+            <SidebarItem />
           </ul>
       </div>
-    );
+    )
   }
 }
 

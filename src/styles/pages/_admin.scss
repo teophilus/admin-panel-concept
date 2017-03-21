@@ -9,10 +9,15 @@ body {
 .admin-panel {
   display: flex;
   flex-direction: row;
+  height: 100vh;
+  padding-top: 50px;
 
   .main {
     max-width: 80%;
+    width: 100%;
     margin: 0 auto;
+    flex-direction: column;
+    display: flex;
   }
 }
 
@@ -30,7 +35,7 @@ section {
   }
     
   .input-wrapper {
-    padding-bottom: 15px;  
+    padding-bottom: 15px;
   }
 }
 
