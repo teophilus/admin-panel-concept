@@ -10,30 +10,31 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  padding-top: 50px;
 
   .main {
-    max-width: 80%;
+    // max-width: 80%;
     width: 100%;
     margin: 0 auto;
+    padding: 70px 35px 0;
     flex-direction: column;
     display: flex;
+    position: relative;
   }
 }
 
 section {
   padding: 15px 0;
   display: flex;
-    
+
   .subsection {
     flex-direction: column;
     flex: 2;
-    
+
     &:first-child {
       flex: 1
     }
   }
-    
+
   .input-wrapper {
     padding-bottom: 15px;
   }
@@ -56,4 +57,30 @@ h2 {
   margin-bottom: 15px;
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.required {
+  &::after {
+    content: ' *';
+    color: red;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  padding: 5px;
 }

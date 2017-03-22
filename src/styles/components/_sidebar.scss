@@ -3,7 +3,7 @@
   $hover-color: darken($bg-color, 2%);
   $selected-color: darken($bg-color, 5%);
   $selected-hover-color: $hover-color;
-  width: 175px;
+  width: 250px;
   background-color: $bg-color;
 
   ul {
@@ -14,7 +14,7 @@
   li {
     position: relative;
     list-style: none;
-    // height: 45px;
+    font-size: .9em;
   }
 
   a {

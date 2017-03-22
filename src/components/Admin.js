@@ -99,6 +99,17 @@ class Section extends Component {
   }
 }
 
+class Breadcrumbs extends Component {
+
+  render() {
+    return (
+      <div className="breadcrumbs">
+        <h3>Breadcrumb Component</h3>  
+      </div>
+    )
+  }
+}
+
 class Admin extends Component {
 
   constructor() {
@@ -118,7 +129,7 @@ class Admin extends Component {
         }]
       }, {
         name: "Section Two",
-        description: "description for section two",
+        description: "Description for section two",
         settings: [{
           type: "dropdown",
           label: "Label One",
@@ -150,6 +161,7 @@ class Admin extends Component {
       <div className="admin-panel">
         <Sidebar />
         <div className="main">
+          <Breadcrumbs />
           { components }
           <button>Save</button>
         </div>

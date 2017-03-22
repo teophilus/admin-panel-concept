@@ -35,22 +35,13 @@
 @import
   'styles/themes/default';
 
-.required {
-  &:after {
-    content: " *";
-    color: red;
-  }
-}
 
-label {
-  display: block;
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid lightgray;
-  padding: 5px;
+.breadcrumbs {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 35px;
+  height: 70px;
 }

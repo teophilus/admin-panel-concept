@@ -8,8 +8,6 @@
 /* Document
    ========================================================================== */
 html {
-  font-family: sans-serif;
-  /* 1 */
   line-height: 1.15;
   /* 2 */
   -ms-text-size-adjust: 100%;
@@ -491,15 +489,15 @@ body {
   width: 1px; }
 
 header {
-  background: #108ee9;
   color: white;
   padding: 5px 25px;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px; }
+  height: 70px;
+  align-items: center;
+  text-transform: uppercase; }
+
+header img {
+  padding-right: 10px; }
 
 button {
   border: 1px solid #108ee9;
@@ -511,7 +509,7 @@ button {
   align-self: flex-end; }
 
 .sidebar {
-  width: 175px;
+  width: 250px;
   background-color: #364150; }
 
 .sidebar ul {
@@ -520,7 +518,8 @@ button {
 
 .sidebar li {
   position: relative;
-  list-style: none; }
+  list-style: none;
+  font-size: .9em; }
 
 .sidebar a {
   display: block;
@@ -557,15 +556,15 @@ body {
 .admin-panel {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  padding-top: 50px; }
+  height: 100vh; }
 
 .admin-panel .main {
-  max-width: 80%;
   width: 100%;
   margin: 0 auto;
+  padding: 70px 35px 0;
   flex-direction: column;
-  display: flex; }
+  display: flex;
+  position: relative; }
 
 section {
   padding: 15px 0;
@@ -597,12 +596,17 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
-.required:after {
-  content: " *";
+.required::after {
+  content: ' *';
   color: red; }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
 label {
-  display: block; }
+  display: block;
+  margin-bottom: .5rem; }
 
 input,
 textarea,
@@ -611,3 +615,12 @@ select {
   border-radius: 3px;
   border: 1px solid lightgray;
   padding: 5px; }
+
+.breadcrumbs {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 35px;
+  height: 70px; }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from '../gear.svg';
 
 class SidebarItem extends Component {
 
@@ -16,6 +17,10 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
+          <header>
+            <img src={Logo} alt="Logo"/>
+            Settings
+          </header>
           <ul>
             <SidebarItem />
             <SidebarItem />

@@ -3,13 +3,14 @@
 // -----------------------------------------------------------------------------
 
 header {
-  background: #108ee9;
   color: white;
   padding: 5px 25px;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
+  height: 70px;
+  align-items: center;
+  text-transform: uppercase;
+
+  img {
+	 padding-right: 10px;
+  }
 }
